@@ -16,6 +16,7 @@ class GuestBook extends StatefulWidget {
   final List<GuestBookMessage> messages; // new
 
   @override
+  // ignore: library_private_types_in_public_api
   _GuestBookState createState() => _GuestBookState();
 }
 class _GuestBookState extends State<GuestBook> {
@@ -57,8 +58,8 @@ class _GuestBookState extends State<GuestBook> {
                       _controller.clear();
                     }
                   },
-                  child: Row(
-                    children: const [
+                  child: const Row(
+                    children: [
                       Icon(Icons.send),
                       SizedBox(width: 4),
                       Text('SEND'),
